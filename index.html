@@ -8,14 +8,14 @@
 
 		
 
-		<link rel="modulepreload" href="/drumhero/_app/start-c13d80c6.js">
-		<link rel="modulepreload" href="/drumhero/_app/chunks/vendor-43cd886a.js">
-		<link rel="modulepreload" href="/drumhero/_app/layout.svelte-904f1151.js">
-		<link rel="modulepreload" href="/drumhero/_app/pages/index.svelte-ebbdb403.js">
+		<link rel="modulepreload" href="/drumhero/_app/start-eb3a231c.js">
+		<link rel="modulepreload" href="/drumhero/_app/chunks/vendor-4b73cb92.js">
+		<link rel="modulepreload" href="/drumhero/_app/layout.svelte-28f3a06c.js">
+		<link rel="modulepreload" href="/drumhero/_app/pages/index.svelte-558ddc94.js">
 		<link rel="stylesheet" href="/drumhero/_app/assets/start-a8cd1609.css">
 
 		<script type="module">
-			import { start } from "/drumhero/_app/start-c13d80c6.js";
+			import { start } from "/drumhero/_app/start-eb3a231c.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/drumhero","assets":"/drumhero"},
@@ -28,8 +28,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/drumhero/_app/layout.svelte-904f1151.js"),
-						import("/drumhero/_app/pages/index.svelte-ebbdb403.js")
+						import("/drumhero/_app/layout.svelte-28f3a06c.js"),
+						import("/drumhero/_app/pages/index.svelte-558ddc94.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -45,8 +45,23 @@
 		<div id="svelte">
 
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Welcome to DrumHero!</h1>
+
+<p>Time: 0</p>
+<button>Reset timer</button>
+<p>BPM:</p>
+<input value="60">
+<p>BPB:</p>
+<input value="1">
+
+<h2>Tracks</h2>
+
+<button>Add track!</button>
+
+<ul><li><p>0:</p>
+	<input>
+	<button>X</button>
+</li></ul>
 
 
 
