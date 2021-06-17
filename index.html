@@ -8,14 +8,15 @@
 
 		
 
-		<link rel="modulepreload" href="/drumhero/_app/start-3373c3f6.js">
+		<link rel="modulepreload" href="/drumhero/_app/start-7181aa59.js">
 		<link rel="modulepreload" href="/drumhero/_app/chunks/vendor-b243af11.js">
 		<link rel="modulepreload" href="/drumhero/_app/layout.svelte-3d4e215b.js">
-		<link rel="modulepreload" href="/drumhero/_app/pages/index.svelte-1d03c938.js">
+		<link rel="modulepreload" href="/drumhero/_app/pages/index.svelte-a75eeb45.js">
 		<link rel="stylesheet" href="/drumhero/_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/drumhero/_app/assets/pages/index.svelte-6db7707e.css">
 
 		<script type="module">
-			import { start } from "/drumhero/_app/start-3373c3f6.js";
+			import { start } from "/drumhero/_app/start-7181aa59.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/drumhero","assets":"/drumhero"},
@@ -29,7 +30,7 @@
 					error: null,
 					nodes: [
 						import("/drumhero/_app/layout.svelte-3d4e215b.js"),
-						import("/drumhero/_app/pages/index.svelte-1d03c938.js")
+						import("/drumhero/_app/pages/index.svelte-a75eeb45.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -45,35 +46,41 @@
 		<div id="svelte">
 
 
-<h1>Welcome to DrumHero!</h1>
+<h1 class="svelte-v07gg4">Welcome to DrumHero!</h1>
 
-<p>Time: 0</p>
-<button>Play beat!</button>
-<p>BPM:</p>
+<p class="svelte-v07gg4">Time: 0</p>
+<button class="svelte-v07gg4">Play beat!</button>
+<p class="svelte-v07gg4">BPM:</p>
 <input value="60">
-<p>BPB:</p>
+<p class="svelte-v07gg4">BPB:</p>
 <input value="4">
 
-<h2>Tracks</h2>
+<h2 class="svelte-v07gg4">Tracks</h2>
 
 
 
-<ul><li><p>0:hit</p>
+<ul><li><p class="svelte-v07gg4">0:hit</p>
+	<p class="svelte-v07gg4">X-1-1-1-1---1-1-1-1-1-1-1---1-1-</p>
 	<input value="1010101010001010">
 	
-</li><li><p>1:coin</p>
+</li><li><p class="svelte-v07gg4">1:coin</p>
+	<p class="svelte-v07gg4">--------1---------------1-------</p>
 	<input value="0000000010000000">
 	
-</li><li><p>2:blop</p>
+</li><li><p class="svelte-v07gg4">2:blop</p>
+	<p class="svelte-v07gg4">--1--1-----1-1-1--1--1-----1-1-1</p>
 	<input value="0010010000010101">
 	
-</li><li><p>3:explode</p>
+</li><li><p class="svelte-v07gg4">3:explode</p>
+	<p class="svelte-v07gg4">X---1-----------1---1-----------</p>
 	<input value="10001">
 	
-</li><li><p>4:powerup</p>
+</li><li><p class="svelte-v07gg4">4:powerup</p>
+	<p class="svelte-v07gg4">----1---------------1-----------</p>
 	<input value="00001">
 	
-</li></ul>
+</li>
+</ul>
 
 
 
