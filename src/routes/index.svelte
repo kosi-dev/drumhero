@@ -35,7 +35,7 @@
 			return;
 		}
 
-		var max = tracks.flatMap((track) => track.length).sort((a, b) => a - b)[tracks.length-1];
+		var max = getMaxTrackLength();
 		if (max == 0) {
 			return;
 		}
@@ -53,10 +53,31 @@
 			}
 		}
 	}
-
+	
+	function getMaxTrackLength() {
+		return tracks.flatMap((track) => track.length).sort((a, b) => a - b)[tracks.length-1]
+	}
 	function resetInterval() {
 		clearInterval(interval);
 		interval = setInterval(appendTimer, 60000/(bpm*bpb));
+	}
+
+	function displayTrack(track: string, timer: number) {
+		var max = getMaxTrackLength();
+		while (track.length < max) {
+			track += "0";
+		}
+		var result = track.slice(timer, max)
+		while (result.length < 32) {
+			result += track;
+		}
+		while (result.includes("0")) {
+			result = result.replace("0", "-")
+		}
+		if (result.charAt(0) == "1") {
+			result = result.replace("1", "X")
+		}
+		return result.slice(0, 32);
 	}
 
 	onMount(() => {
@@ -85,8 +106,16 @@
 	{#each audios as t, i}
 		<li>
 			<p>{i}:{t}</p>
+			<p>{displayTrack(tracks[i], timer)}</p>
 			<input bind:value={tracks[i]}>
 			<!-- <button on:click={() => removeTrack(i)}>X</button> -->
 		</li>
 	{/each}
 </ul>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+	h1, h2, p, button {
+		font-family: 'Roboto Mono', monospace;
+	}
+</style>
