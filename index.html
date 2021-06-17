@@ -8,14 +8,14 @@
 
 		
 
-		<link rel="modulepreload" href="/drumhero/_app/start-eb3a231c.js">
-		<link rel="modulepreload" href="/drumhero/_app/chunks/vendor-4b73cb92.js">
-		<link rel="modulepreload" href="/drumhero/_app/layout.svelte-28f3a06c.js">
-		<link rel="modulepreload" href="/drumhero/_app/pages/index.svelte-558ddc94.js">
+		<link rel="modulepreload" href="/drumhero/_app/start-3373c3f6.js">
+		<link rel="modulepreload" href="/drumhero/_app/chunks/vendor-b243af11.js">
+		<link rel="modulepreload" href="/drumhero/_app/layout.svelte-3d4e215b.js">
+		<link rel="modulepreload" href="/drumhero/_app/pages/index.svelte-1d03c938.js">
 		<link rel="stylesheet" href="/drumhero/_app/assets/start-a8cd1609.css">
 
 		<script type="module">
-			import { start } from "/drumhero/_app/start-eb3a231c.js";
+			import { start } from "/drumhero/_app/start-3373c3f6.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/drumhero","assets":"/drumhero"},
@@ -28,8 +28,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/drumhero/_app/layout.svelte-28f3a06c.js"),
-						import("/drumhero/_app/pages/index.svelte-558ddc94.js")
+						import("/drumhero/_app/layout.svelte-3d4e215b.js"),
+						import("/drumhero/_app/pages/index.svelte-1d03c938.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -48,19 +48,31 @@
 <h1>Welcome to DrumHero!</h1>
 
 <p>Time: 0</p>
-<button>Reset timer</button>
+<button>Play beat!</button>
 <p>BPM:</p>
 <input value="60">
 <p>BPB:</p>
-<input value="1">
+<input value="4">
 
 <h2>Tracks</h2>
 
-<button>Add track!</button>
 
-<ul><li><p>0:</p>
-	<input>
-	<button>X</button>
+
+<ul><li><p>0:hit</p>
+	<input value="1010101010001010">
+	
+</li><li><p>1:coin</p>
+	<input value="0000000010000000">
+	
+</li><li><p>2:blop</p>
+	<input value="0010010000010101">
+	
+</li><li><p>3:explode</p>
+	<input value="10001">
+	
+</li><li><p>4:powerup</p>
+	<input value="00001">
+	
 </li></ul>
 
 
